@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="images/icon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ghibli Collection</title>
+</head>
+
+<body>
+    <a class = "skip" href="#main">Skip to Main Content</a>
+    <header>
+    <nav id="navbar">
+        <img src="images/logo.png" alt="Logo" class="logo" id="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chihiro.html" class="active">Chihiro</a></li>
+            <li><a href="sophie.html">Sophie</a></li>
+            <li><a href="kiki.html">Kiki</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main id="main">
+
+        <div class="intro">
+            <div>
+                <h2>Spirited Away</h2>
+                <h1>Chihiro</h1>
+                <p>Initially timid and unsure, Chihiro finds herself in a mysterious and magical world after her family stumbles upon an abandoned amusement park. Throughout her adventure, she evolves into a brave and resourceful girl as she navigates this strange realm, seeking to rescue her parents who have been transformed into pigs. Chihiro's journey is filled with challenges that she overcomes by forming friendships with various intriguing creatures, demonstrating her kindness, determination, and growth.</p>
+            </div>
+
+            <img src="images/sen1.jpg" width = "400" alt="chihiro">
+        </div>
+
+
+
+        <div class="bento">
+            <div class="single_bento" id="one">
+                <img src="images/chihiro1.jpg" width="200" alt="chihiro1">
+            </div>
+
+            <div class="single_bento" id="two">
+                <img src="images/chihiro2.jpg" width="200" alt="chihiro2">
+            </div>
+
+            <div class="single_bento" id="three">
+                <img src="images/chihiro3.jpg" width="200" alt="chihiro3">
+            </div>
+
+            <div class="single_bento" id="four">
+                <img src="images/chihiro4.jpg"  width ="200" alt="chihiro4">
+            </div>
+
+            <div class="single_bento" id="five">
+                <img src="images/chihiro5.jpg" width="200" alt="chihiro5">
+            </div>
+        </div>
+
+    </main>
+    <footer id = "footer">
+		<p>Design and Code &copy; 2024 Rachel(Ruijie) Zhao</p>
+	</footer>
+
+    <script>
+
+        var lastScrollTop = 0;
+        var navbar = document.getElementById('navbar');
+        var hideNavbarTimeout = null;
+
+        window.addEventListener('scroll', function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (hideNavbarTimeout) {
+            clearTimeout(hideNavbarTimeout);
+            hideNavbarTimeout = null;
+        }
+
+        if (scrollTop > lastScrollTop) {
+            hideNavbarTimeout = setTimeout(function() {
+                navbar.style.top = '-100px';
+            }, 500);
+        } else {
+            navbar.style.top = '50px';
+        }
+        lastScrollTop = scrollTop;
+        });
+
+    </script>
+</body>
+</html>

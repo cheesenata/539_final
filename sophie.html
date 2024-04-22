@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="images/icon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ghibli Collection</title>
+</head>
+
+<body>
+    <a class = "skip" href="#main">Skip to Main Content</a>
+    <header>
+    <nav id="navbar">
+        <img src="images/logo.png" alt="Logo" class="logo" id="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chihiro.html">Chihiro</a></li>
+            <li><a href="sophie.html" class="active">Sophie</a></li>
+            <li><a href="kiki.html">Kiki</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main id="main">
+
+        <div class="intro">
+            <div>
+                <h2>Howl's Moving Castle</h2>
+                <h1>Sophie</h1>
+                <p>Sophie starts as a shy, unassuming hat maker, but her life takes a dramatic turn when a witch's spell transforms her into an old woman. Seeking to break the curse, Sophie leaves her home and becomes the housekeeper in the magical, moving castle owned by the mysterious wizard Howl. Throughout her journey, Sophie shows great courage and grows in self-confidence, forming deep connections with Howl and other magical beings. Her adventure is a beautiful blend of self-discovery, love, and bravery.</p>
+            </div>
+
+            <img src="images/sophie_intro.jpg" width = "400" alt="chihiro">
+        </div>
+
+
+
+        <div class="bento">
+            <div class="single_bento" id="one">
+                <img src="images/sophie1.jpg" width="200" alt="chihiro1">
+            </div>
+
+            <div class="single_bento" id="two">
+                <img src="images/sophie2.jpg" width="200" alt="chihiro2">
+            </div>
+
+            <div class="single_bento" id="three">
+                <img src="images/sophie3.jpg" width="200" alt="chihiro3">
+            </div>
+
+            <div class="single_bento" id="four">
+                <img src="images/sophie4.jpg"  width ="200" alt="chihiro4">
+            </div>
+
+            <div class="single_bento" id="five">
+                <img src="images/sophie5.jpg" width="200" alt="chihiro5">
+            </div>
+        </div>
+
+    </main>
+    <footer id = "footer">
+		<p>Design and Code &copy; 2024 Rachel(Ruijie) Zhao</p>
+	</footer>
+
+    <script>
+
+        var lastScrollTop = 0;
+        var navbar = document.getElementById('navbar');
+        var hideNavbarTimeout = null;
+
+        window.addEventListener('scroll', function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (hideNavbarTimeout) {
+            clearTimeout(hideNavbarTimeout);
+            hideNavbarTimeout = null;
+        }
+
+        if (scrollTop > lastScrollTop) {
+            hideNavbarTimeout = setTimeout(function() {
+                navbar.style.top = '-100px';
+            }, 500);
+        } else {
+            navbar.style.top = '50px';
+        }
+        lastScrollTop = scrollTop;
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="images/icon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ghibli Collection</title>
+</head>
+
+<body>
+    <a class = "skip" href="#main">Skip to Main Content</a>
+    <header>
+    <nav id="navbar">
+        <img src="images/logo.png" alt="Logo" class="logo" id="logo">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chihiro.html">Chihiro</a></li>
+            <li><a href="sophie.html">Sophie</a></li>
+            <li><a href="kiki.html">Kiki</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main id="main">
+
+        <div class="intro">
+            <div>
+                <h2>My Collection from</h2>
+                <h1>Studio Ghibli</h1>
+                <p>Welcome to the enchanting world of Studio Ghibli, where bravery, kindness, and adventure blend seamlessly in the stories of our beloved heroines. Each journey invites you to explore realms of wonder and discover the magic within. Join me as we celebrate these bold and kind-hearted characters who inspire us to believe in the power of dreams.</p>
+            </div>
+
+            <div class="flip">
+                <div class="pic">
+                    <div class="front">
+                        <img src="images/back.jpg" width = "400" alt="ghibli">
+                    </div>
+                    <div class="back">
+                        <img src="images/ghibli.jpg" width = "400" alt="ghibli2">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="gallery">
+            <a href="chihiro.html" style="text-decoration: none; color: inherit;">
+                <div class="single_card">
+                    <img src="images/sen_cover.jpg" width="200" alt="chihiro">
+                    <div class="card_title">Spirited Away</div>
+                </div>
+            </a>
+
+            <a href="sophie.html" style="text-decoration: none; color: inherit;">
+                <div class="single_card">
+                    <img src="images/howl_cover.jpg" width="200" alt="sophie">
+                    <div class="card_title">Howl's Moving Castle</div>
+                </div>
+            </a>
+
+            <a href="kiki.html" style="text-decoration: none; color: inherit;">
+                <div class="single_card">
+                    <img src="images/kiki_cover.jpg" width="200" alt="kiki">
+                    <div class="card_title">Kiki's Delivery Service</div>
+                </div>
+            </a>
+        </div>
+
+
+    </main>
+    <footer id = "footer">
+		<p>Design and Code &copy; 2024 Rachel(Ruijie) Zhao</p>
+	</footer>
+
+    <script>
+
+        var lastScrollTop = 0;
+        var navbar = document.getElementById('navbar');
+        var hideNavbarTimeout = null;
+
+        window.addEventListener('scroll', function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (hideNavbarTimeout) {
+            clearTimeout(hideNavbarTimeout);
+            hideNavbarTimeout = null;
+        }
+
+        if (scrollTop > lastScrollTop) {
+            hideNavbarTimeout = setTimeout(function() {
+                navbar.style.top = '-100px';
+            }, 500);
+        } else {
+            navbar.style.top = '50px';
+        }
+        lastScrollTop = scrollTop;
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="images/icon.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ghibli Collection</title>
+</head>
+
+<body>
+    <a class = "skip" href="#main">Skip to Main Content</a>
+    <header>
+    <nav id="navbar">
+        <img src="images/logo.png" alt="Logo" class="logo" id="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chihiro.html">Chihiro</a></li>
+            <li><a href="sophie.html">Sophie</a></li>
+            <li><a href="kiki.html"class="active">Kiki</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <main id="main">
+
+        <div class="intro">
+            <div>
+                <h2>Kiki's Delivery Service</h2>
+                <h1>Kiki</h1>
+                <p>As part of her witch’s tradition, at 13, Kiki leaves home to spend a year living independently in a new town. She settles in a seaside city, where she starts a flying delivery service using her broomstick. Kiki is friendly, hardworking, and eager to fit in, though she faces her fair share of challenges, from self-doubt to losing her magical abilities temporarily. Her journey is about growing up, finding her place in the world, and learning the importance of perseverance and self-reliance.</p>
+            </div>
+
+            <img src="images/kiki_intro.jpg" width = "400" alt="chihiro">
+        </div>
+
+
+
+        <div class="bento">
+            <div class="single_bento" id="one">
+                <img src="images/kiki1.jpg" width="200" alt="chihiro1">
+            </div>
+
+            <div class="single_bento" id="two">
+                <img src="images/kiki2.jpg" width="200" alt="chihiro2">
+            </div>
+
+            <div class="single_bento" id="three">
+                <img src="images/kiki3.jpg" width="200" alt="chihiro3">
+            </div>
+
+            <div class="single_bento" id="four">
+                <img src="images/kiki4.jpg"  width ="200" alt="chihiro4">
+            </div>
+
+            <div class="single_bento" id="five">
+                <img src="images/kiki5.jpg" width="200" alt="chihiro5">
+            </div>
+        </div>
+
+    </main>
+    <footer id = "footer">
+		<p>Design and Code &copy; 2024 Rachel(Ruijie) Zhao</p>
+	</footer>
+
+    <script>
+
+        var lastScrollTop = 0;
+        var navbar = document.getElementById('navbar');
+        var hideNavbarTimeout = null;
+
+        window.addEventListener('scroll', function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (hideNavbarTimeout) {
+            clearTimeout(hideNavbarTimeout);
+            hideNavbarTimeout = null;
+        }
+
+        if (scrollTop > lastScrollTop) {
+            hideNavbarTimeout = setTimeout(function() {
+                navbar.style.top = '-100px';
+            }, 500);
+        } else {
+            navbar.style.top = '50px';
+        }
+        lastScrollTop = scrollTop;
+        });
+
+    </script>
+
+</body>
+</html>
